@@ -59,6 +59,14 @@ export default function Tesseract() {
     let animId
     let t = 0
 
+    let scrollY = window.scrollY
+    let targetScrollY = window.scrollY
+
+    const onScroll = () => {
+        targetScrollY = window.scrollY
+    }
+    window.addEventListener('scroll', onScroll)
+
     const resize = () => {
       canvas.width = canvas.offsetWidth
       canvas.height = canvas.offsetHeight
@@ -67,6 +75,7 @@ export default function Tesseract() {
     window.addEventListener('resize', resize)
 
     const draw = () => {
+      scrollY += (targetScrollY - scrollY) * 0.05
       const { width, height } = canvas
       ctx.clearRect(0, 0, width, height)
 
@@ -78,7 +87,7 @@ export default function Tesseract() {
         const [px, py, depth] = project3Dto2D(p3)
         return {
           x: px * Math.min(width, height) + width / 2,
-          y: py * Math.min(width, height) + height / 2,
+          y: py * Math.min(width, height) + height / 2 - scrollY * 0.3,
           depth,
         }
       })
