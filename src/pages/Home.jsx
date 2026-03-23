@@ -25,7 +25,7 @@ export default function Home() {
 
           {/* LEFT — hero text */}
           <div className="hero-text">
-            <AsciiName text="BilloDoom" />
+            <AsciiName text="Portfolio" />
             <p className="hero-tag">Graphics Programmer & Developer</p>
             <h1>Filip Tudja</h1>
             <p className="hero-sub">
@@ -64,7 +64,7 @@ export default function Home() {
 
       {/* PROJECTS */}
       <section id="projects">
-        <h2>Projects</h2>
+        <h2>UNDER CONSTRUCTION, PAGE NOT FINISHED YET</h2>
         <div className="projects-grid">
           {PROJECTS.map(p => (
             <ProjectCard
