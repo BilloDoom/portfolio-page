@@ -1,8 +1,13 @@
 import { useState } from 'react'
 import Tesseract from '../Tesseract.jsx'
 import '../App.css'
+import PROJECTS from '../data/Projects.js'
+import ProjectCard from '../projects/ProjectCard.jsx'
+import TECH from '../data/Tech.js'
 
 export default function Home() {
+  const [openId, setOpenId] = useState(null)
+
   return (
     <>
       <a href="/projects" className="btn btn-outline">Projects</a>

@@ -8,6 +8,7 @@
   text-align: left;
   position: relative;
   z-index: 1;
+  padding-top: calc(4rem + 3rem); /* existing padding + navbar height */
 }
 
 .hero-tag {
