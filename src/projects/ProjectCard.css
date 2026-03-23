@@ -1,0 +1,57 @@
+.project-card {
+  border: 1px solid var(--border);
+  transition: border-color 0.2s;
+  grid-column: 1 / -1;
+}
+
+.project-card.open {
+  border-color: var(--accent);
+}
+
+.project-header {
+  display: flex;
+  align-items: center;
+  gap: 1.5rem;
+  padding: 1.5rem;
+  cursor: pointer;
+  transition: background 0.15s;
+}
+
+.project-header:hover {
+  background: var(--accent-bg);
+}
+
+.project-header-left {
+  flex: 1;
+}
+
+.project-header-left h3 {
+  margin: 0 0 0.3rem;
+  font-size: 1.1rem;
+  color: var(--text-h);
+}
+
+.project-header-left p {
+  margin: 0;
+  font-size: 0.9rem;
+  color: var(--text);
+}
+
+.project-tags {
+  display: flex;
+  gap: 0.4rem;
+  flex-wrap: wrap;
+}
+
+.project-arrow {
+  font-size: 1.4rem;
+  color: var(--accent);
+  min-width: 1.5rem;
+  text-align: right;
+  font-weight: 300;
+}
+
+.project-panel {
+  padding: 2rem 1.5rem;
+  border-top: 1px solid var(--border);
+}

@@ -77,8 +77,8 @@ export default function Tesseract() {
         const p3 = project4Dto3D(r4)
         const [px, py, depth] = project3Dto2D(p3)
         return {
-          x: px * Math.min(width, height) * 0.3 + width / 2,
-          y: py * Math.min(width, height) * 0.3 + height / 2,
+          x: px * Math.min(width, height) + width / 2,
+          y: py * Math.min(width, height) + height / 2,
           depth,
         }
       })
@@ -92,7 +92,7 @@ export default function Tesseract() {
         ctx.beginPath()
         ctx.moveTo(pa.x, pa.y)
         ctx.lineTo(pb.x, pb.y)
-        ctx.strokeStyle = `rgba(170, 59, 255, ${alpha * 0.7})`
+        ctx.strokeStyle = `rgba(57, 255, 100, ${alpha * 0.7})`
         ctx.lineWidth = alpha * 1.5
         ctx.stroke()
       })
@@ -102,7 +102,7 @@ export default function Tesseract() {
         const alpha = Math.min(1, (depth - 0.1) * 1.5)
         ctx.beginPath()
         ctx.arc(x, y, r, 0, Math.PI * 2)
-        ctx.fillStyle = `rgba(200, 130, 255, ${alpha})`
+        ctx.fillStyle = `rgba(100, 180, 255, ${alpha})`
         ctx.fill()
       })
 
